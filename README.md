@@ -9,4 +9,4 @@
 
 ### Code Highlighting
 
-We used [EnlighterJS](https://enlighterjs.org/Language.Javascript.html) to highlight the code present in each activity.
+We used [EnlighterJS](https://enlighterjs.org/) to highlight the code present in each activity.
