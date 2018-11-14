@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
-        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="javascript" />
     </head>
     
     <body class="is-preload">
@@ -33,9 +35,51 @@
                     <section>
                         <header class="main">
                             <h1>Práctica #6</h1>
+                            <h2>Serie de Fibonacci en JavaScript</h2>
                         </header>
                         
-                        <!-- Content goes here! -->
+                        <pre data-enlighter-language="js">
+function fibonacci(n) {
+    if (n &lt;= 0) return 0;
+    if (n == 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+console.log("Ingrese la cantidad de números a generar: ");
+let n = parseInt(readline());
+
+let serie = "";
+for (var i = 0; i &lt; n; i++) {
+    serie += fibonacci(i);
+    if (i &gt; 0) {
+        serie += ", ";
+    }
+}
+console.log("Serie de Fibonacci:\n" + serie);
+                        </pre>
+
+                        <p>
+                            <ul>
+                                <li>
+                                    <h4>¿Qué programa se utilizó para escribir el programa?</h4>
+                                    <p><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></p>
+                                </li>
+                                <li>
+                                    <h4>¿Por qué fue escogido?</h4>
+                                    <p>
+                                        Se escogió este Software debido a su integración nativa con el lenguaje,
+                                        al igual que es muy sencillo de encontrar errores en el código con este editor.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>¿Por qué se me hizo fácil?</h4>
+                                    <p>
+                                        Debido a lo simple que es el Editor, y gracias a que sus características me permiten
+                                        moverme en mi código con más fácilidad y rastrear líneas de código completo.
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
                     </section>
                 </div>
             </div>
@@ -47,7 +91,7 @@
                             <h2>Menu Principal</h2>
                         </header>
                         <ul>
-                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="index.html">Inicio</a></li>
                             <li>
                                 <span class="opener active">Prácticas</span>
                                 <ul>
@@ -69,10 +113,12 @@
             </div>
         </div>
         
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/browser.min.js"></script>
-        <script src="../js/breakpoints.min.js"></script>
-        <script src="../js/util.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/browser.min.js"></script>
+        <script src="js/breakpoints.min.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>

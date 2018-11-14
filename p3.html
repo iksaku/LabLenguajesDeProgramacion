@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
-        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="generic" />
     </head>
     
     <body class="is-preload">
@@ -33,9 +35,57 @@
                     <section>
                         <header class="main">
                             <h1>Práctica #3</h1>
+                            <h2>Lenguajes Script</h2>
                         </header>
                         
-                        <!-- Content goes here! -->
+                        <ul>
+                            <li>
+                                <h4>C</h4>
+                                <pre data-enlighter-languaje="c">
+#include &lt;stdio.h&gt;
+
+void main() {
+    printf("Hello World!\n");
+}
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>PHP</h4>
+                                <pre data-enlighter-languaje="php">
+&lt;?php
+echo "Hello World!";
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>Python</h4>
+                                <pre data-enlighter-languaje="python">
+print("Hello World!")
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>JavaScript</h4>
+                                <pre data-enlighter-languaje="js">
+console.log("Hello World!");
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>Ruby</h4>
+                                <pre data-enlighter-languaje="ruby">
+puts "Hello World!"
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>Perl</h4>
+                                <pre data-enlighter-languaje="perl">
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Hello, World!\n";
+                                </pre>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -47,7 +97,7 @@
                             <h2>Menu Principal</h2>
                         </header>
                         <ul>
-                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="index.html">Inicio</a></li>
                             <li>
                                 <span class="opener active">Prácticas</span>
                                 <ul>
@@ -69,10 +119,12 @@
             </div>
         </div>
         
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/browser.min.js"></script>
-        <script src="../js/breakpoints.min.js"></script>
-        <script src="../js/util.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/browser.min.js"></script>
+        <script src="js/breakpoints.min.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>

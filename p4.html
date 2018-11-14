@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
-        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="generic" />
     </head>
     
     <body class="is-preload">
@@ -14,28 +16,82 @@
                     <header id="header">
                         <div class="align-center">
                             <ul class="pagination">
-                                <li><a class="button" href="p9.html">Anterior</a></li>
+                                <li><a class="button" href="p3.html">Anterior</a></li>
                                 <li><a class="page" href="p1.html">1</a></li>
                                 <li><a class="page" href="p2.html">2</a></li>
                                 <li><a class="page" href="p3.html">3</a></li>
-                                <li><a class="page" href="p4.html">4</a></li>
+                                <li><a class="page active">4</a></li>
                                 <li><a class="page" href="p5.html">5</a></li>
                                 <li><a class="page" href="p6.html">6</a></li>
                                 <li><a class="page" href="p7.html">7</a></li>
                                 <li><a class="page" href="p8.html">8</a></li>
                                 <li><a class="page" href="p9.html">9</a></li>
-                                <li><a class="page active">10</a></li>
-                                <li><a class="button disabled">Siguiente</a></li>
+                                <li><a class="page" href="p10.html">10</a></li>
+                                <li><a class="button" href="p5.html">Siguiente</a></li>
                             </ul>
                         </div>
                     </header>
                     
                     <section>
                         <header class="main">
-                            <h1>Práctica #10</h1>
+                            <h1>Práctica #4</h1>
+                            <h2>Serie de Fibonacci en C y C++</h2>
                         </header>
                         
-                        <!-- Content goes here! -->
+                        <ul>
+                            <li>
+                                <h4>C</h4>
+                                <pre data-enlighter-languaje="c">
+#include &lt;stdio.h&gt;
+
+int fibonacci(int n) {
+    if (n &lt;= 0) return 0;
+    if (n == 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+void main() {
+    int n, i = 0;
+    printf("Ingrese la cantidad de números a generar: ");
+    scanf("%d", &n);
+
+    printf("Serie de Fibonacci:\n");
+    while (i &lt; n) {
+        printf("%d", fibonacci(i));
+        if (i &gt; 0) printf(", ");
+        ++i;
+    }
+}
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>C++</h4>
+                                <pre data-enlighter-languaje="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int fibonacci(int n) {
+    if (n &lt;= 0) return 0;
+    if (n == 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+void main() {
+    int n, i = 0;
+    cout &lt;&lt; "Ingrese la cantidad de números a generar: ";
+    cin &gt;&gt; n;
+
+    cout &lt;&lt; "Serie de Fibonacci:\n";
+    while (i &lt; n) {
+        cout &lt;&lt; fibonacci(i);
+        if (i &gt; 0) cout &lt;&lt; ", ";
+        ++i;
+    }
+}
+                                </pre>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -47,20 +103,20 @@
                             <h2>Menu Principal</h2>
                         </header>
                         <ul>
-                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="index.html">Inicio</a></li>
                             <li>
                                 <span class="opener active">Prácticas</span>
                                 <ul>
                                     <li><a href="p1.html">Práctica #1</a></li>
                                     <li><a href="p2.html">Práctica #2</a></li>
                                     <li><a href="p3.html">Práctica #3</a></li>
-                                    <li><a href="p4.html">Práctica #4</a></li>
+                                    <li><a>Práctica #4</a></li>
                                     <li><a href="p5.html">Práctica #5</a></li>
                                     <li><a href="p6.html">Práctica #6</a></li>
                                     <li><a href="p7.html">Práctica #7</a></li>
                                     <li><a href="p8.html">Práctica #8</a></li>
                                     <li><a href="p9.html">Práctica #9</a></li>
-                                    <li><a>Práctica #10</a></li>
+                                    <li><a href="p10.html">Práctica #10</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -69,10 +125,12 @@
             </div>
         </div>
         
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/browser.min.js"></script>
-        <script src="../js/breakpoints.min.js"></script>
-        <script src="../js/util.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/browser.min.js"></script>
+        <script src="js/breakpoints.min.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>
