@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="generic" />
     </head>
     
     <body class="is-preload">
@@ -36,7 +38,71 @@
                             <h2>Lenguajes Lógicos</h2>
                         </header>
                         
-                        <!-- Content goes here! -->
+                        <ul>
+                            <li>
+                                <h4>¿Qué es un Lenguaje Lógico?</h4>
+                                <p>
+                                    La programación lógica es un tipo de paradigmas de
+                                    programación dentro del paradigma de programación
+                                    declarativa. La programación lógica gira en torno al
+                                    concepto de predicado, o relación entre elementos. Se
+                                    basa en el concepto de función (que no es más que una
+                                    evolución de los predicados), de corte más matemático.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>¿Para qué sirven?</h4>
+                                <p>
+                                    La programación lógica encuentra su hábitat natural en aplicaciones de inteligencia artificial o relacionadas:
+                                    <ul>
+                                        <li>
+                                            Sistemas expertos, donde un sistema de información imita las recomendaciones de un experto sobre algún dominio de conocimiento.
+                                        </li>
+                                        <li>
+                                            Demostración automática de teoremas, donde un programa genera nuevos teoremas sobre una teoría existente.
+                                        </li>
+                                        <li>
+                                            Reconocimiento de lenguaje natural, donde un programa es capaz de comprender (con limitaciones) la información contenida en una expresión lingüística humana.
+                                        </li>
+                                        <li>
+                                            La programación lógica también se utiliza en aplicaciones más "mundanas" pero de manera muy limitada, ya que la programación tradicional es más adecuada a tareas de propósito general.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Ejemplos de Lenguajes Lógicos</h4>
+                                <p>
+                                    <ul>
+                                        <li>Prolog</li>
+                                        <li>CLP</li>
+                                        <li>CSP</li>
+                                        <li>Alma-0</li>
+                                        <li>CLAC</li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>
+                                <h4>¿Qué significa Prolog?</h4>
+                                <p>
+                                    Prolog (o PROLOG), proveniente del francés <strong>Pro</strong>grammation en <strong>Log</strong>ique,​
+                                    es un lenguaje de programación lógico e interpretado usado habitualmente
+                                    en el campo de la Inteligencia artificial.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Ejemplo en Prolog</h4>
+                                <p>
+                                    <pre data-enlighter-language="prolog">
+my_factorial(1,F,F):- !.
+
+my_factorial(N, T, F):-
+          N2 is N-1,T2 is T * N,
+          my_factorial(N2, T2, F).
+                                    </pre>
+                                </p>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -75,5 +141,7 @@
         <script src="js/breakpoints.min.js"></script>
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>

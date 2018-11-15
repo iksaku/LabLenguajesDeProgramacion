@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="javascript" />
     </head>
     
     <body class="is-preload">
@@ -40,37 +42,59 @@
                             <li>
                                 <h4>¿Qué es el Flujo de Control?</h4>
                                 <p>
-
+                                        Se llama flujo de control al orden en el que se ejecutan las instrucciones
+                                        de un programa, siendo las propias instrucciones las que determinan o
+                                        controlan dicho flujo.
                                 </p>
                             </li>
                             <li>
                                 <h4>¿Qué es una subrutina?</h4>
                                 <p>
-
+                                    Las <i>subrutinas</i>, <i>subprogramas</i> (También conocidos como <i>procedimiento</i>,
+                                    <i>función</i>, <i>rutina</i> o <i>método</i>), como idea general, se presenta como un subalgoritmo
+                                    que forma parte del algoritmo principal, el cual permite resolver una tarea específica. 
                                 </p>
                             </li>
                             <li>
                                 <h4>¿Qué es recursión?</h4>
                                 <p>
-
+                                    Es una técnica utilizada en programación que nos permite que un bloque de instrucciones
+                                    se ejecute un cierto número de veces (el que nosotros determinemos).
                                 </p>
                             </li>
                             <li>
                                 <h4>¿Cuándo se puede utilizar la recursión?</h4>
                                 <p>
-
+                                    Por ejemplo, all calcular del factorial de un número entero. El factorial de un número
+                                    se define como ese número multiplicado por el anterior, éste por el anterior, y así
+                                    sucesivamente hasta llegar a 1.
                                 </p>
                             </li>
                             <li>
                                 <h4>¿En que casos <i>No Se Aplica</i> la recursión?</h4>
                                 <p>
-
+                                    <ul>
+                                        <li>
+                                            Cuando la velocidad es importante, ya que en muchos casos la
+                                            Iteratividad puede llegar a ser más rápida en cálculos lineales.
+                                        </li>
+                                        <li>
+                                            Cuando se maneja una gran cantidad de memoria, ya que la memoria
+                                            para una pila es limitada, y al utilizar recursión, el uso de dicha memoria
+                                            incrementa constantemente hasta que la recursión finaliza.
+                                        </li>
+                                    </ul>
                                 </p>
                             </li>
                             <li>
                                 <h4>Ejemplo de Recursión:</h4>
                                 <p>
-                                    
+                                    <pre data-enlighter-languaje="js">
+function factorial(n) {
+    if (n &lt;= 1) return 1;
+    return n * factorial(n - 1);
+}
+                                    </pre>
                                 </p>
                             </li>
                         </ul>
@@ -112,5 +136,7 @@
         <script src="js/breakpoints.min.js"></script>
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>

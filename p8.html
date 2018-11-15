@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <title>Jorge González | Laboratorio de Lenguajes de Programación</title>
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/EnlighterJS.min.css" />
+        <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" theme="enlighter" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-language="generic" />
     </head>
     
     <body class="is-preload">
@@ -36,7 +38,104 @@
                             <h2>Lenguajes Funcionales</h2>
                         </header>
                         
-                        <!-- Content goes here! -->
+                        <ul>
+                            <li>
+                                <h4>Características de los Lenguajes Funcionales</h4>
+                                <p>
+                                    Los programas escritos en un lenguaje funcional están constituidos
+                                    únicamente por definiciones de funciones, entendiendo éstas no como
+                                    subprogramas clásicos de un lenguaje imperativo, sino como funciones
+                                    puramente matemáticas basadas en el <i>cálculo lambda</i>, en las que
+                                    se verifican ciertas propiedades como la transparencia referencial
+                                    (el significado de una expresión depende únicamente del significado de
+                                    sus sobrexpresiones), y por tanto, la carencia total de efectos colaterales.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Haskell</h4>
+                                <ul>
+                                    <li>Características</li>
+                                    <p>
+                                        Incluye muchas de las últimas innovaciones en el desarrollo de los lenguajes
+                                        de programación funcional, como son las funciones de orden superior, evaluación
+                                        perezosa, tipos polimórficos estáticos, tipos definidos por el usuario, encaje por
+                                        patrones, y definiciones de listas.
+                                    </p>
+                                    <p>
+                                        <pre data-enlight-language="haskell">
+--Sumar elementos de una lista
+sumar :: [Int] -> Int
+sumar [] = 0
+sumar (x:xs) = x+sumar(xs)
+                                        </pre>
+                                    </p>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Erlang</h4>
+                                <p>
+                                    En Erlang se pueden realizar toda clase de proyectos en especial proyectos que
+                                    necesiten tráfico de información de respuesta en tiempo real, donde para cada
+                                    petición debe haber una respuesta inmediata dependiendo de si se pudo resolver
+                                    o no la petición.
+                                </p>
+                                <p>
+                                    <pre data-enlight-language="erlang">
+-module(fact).
+-export([factorial/1]).
+
+
+factorial(N) -&gt;
+    factorial(1, N, 1).
+
+factorial(Current, N, Result) when Current =&lt; N -&gt;
+    NewResult = Result * Current,
+    factorial(Current+1, N, NewResult);
+
+factorial(_, _, Result) -&gt;
+    Result.
+                                    </pre>
+                                </p>
+                            </li>
+                            <li>
+                                <h4>LISP</h4>
+                                <p>
+                                    El LISP es un lenguaje funcional que se apoya en la utilización de funciones
+                                    matemáticas para el control de los datos. Pero el elemento fundamental en el
+                                    LISP es la lista. Y desde el punto de vista más amplio del término. Cada función
+                                    del LISP y cada programa que generemos con él vienen dado en forma de lista.
+                                    Por esta razón los datos no se pueden diferenciarse sintácticamente de los programas.
+                                </p>
+                                <p>
+                                    <pre data-enlight-language="lisp">
+(defun factorial (n)
+    (if (= n 0)
+        1
+    (* n (factorial (- n 1))) ) )
+    (loop for i from 0 to 16
+        do (format t "~D! = ~D~%" i (factorial i)) )
+                                    </pre>
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Scheme</h4>
+                                <p>
+                                    La filosofía de Scheme es minimalista. Su objetivo no es acumular un gran número
+                                    de funcionalidades, sino evitar las debilidades y restricciones que hacen necesaria
+                                    su adicción. Así, Scheme proporciona el mínimo número posible de nociones primitivas,
+                                    construyendo todo lo demás a partir de un reducido número de abstracciones. Por ejemplo,
+                                    el mecanismo principal para el control de flujo son las llamadas recursivas finales.
+                                </p>
+                                <p>
+                                    <pre data-enlight-language="scheme">
+(define (factorial n)
+    (cond ((&lt; n 0) #f)
+        ((&lt;= n 1) 1)
+    (else (* n (factorial (- n 1))))))
+                                    </pre>
+                                </p>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -75,5 +174,7 @@
         <script src="js/breakpoints.min.js"></script>
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/MooTools.min.js"></script>
+        <script src="js/EnlighterJS.min.js"></script>
     </body>
 </html>
